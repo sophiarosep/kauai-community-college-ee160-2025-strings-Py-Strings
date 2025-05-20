@@ -1,0 +1,42 @@
+# the text is the first paragraph of pride and prejudice
+text = """IT IS A TRUTH universally acknowledged that a single man in possession of a good fortune must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighborhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters. “My dear Mr. Bennet,” said his lady to him one day, “have you heard that Netherfield Park is let at last?” Mr. Bennet replied that he had not. “But it is,” returned she, “for Mrs. Long has just been here, and she told me all about it.” Mr. Bennet made no answer."""
+e_count = text.lower()count('e')
+print(f"times 'e' appears: {e_count}")
+# this is to see how many times the letter e appears 
+## by using text.lower instead of text.count it will convert the text to lower case first so it considers ALL e's! (more accurate i think????)
+### that might completely wrong and something i made up 
+b_count = text.lower()count('b')
+print(f"times 'b' appears: {b_count}")
+# this is how many times b appears 
+e_ind = text.lower().find('e')
+after_e = text[e_ind + 1: e_ind + 21]
+print(f"First 20 characters after first 'e': \"{after_e}\"")
+#this is the first twenty characters after e..
+words = len(text.split())
+print(f"word count: {words}")
+#instead of doing counting the spaces + 1, i think this is slightly more effective cause it actually counts? 
+## who knows
+sentences = text.count('.') + text.count('!') + text.count('?')
+print(f"the estimated sentences is: {sentences}")
+# for shortest sentences this is my guess...........
+shortest_sentence = sentences[0]
+for sentence in sentences:
+  if len(sentence) < len(shortest sentence):
+    shortest_sentence = sentence 
+print(f"shortest sentence: \"{shortest_sentence}\"")
+# basically!!
+## it will assume the first sentence is the shortest
+## if there is a sentence shorter than the first one it will update and that will be the shortest 
+
+#capitalize the h 
+new_text = ""
+for letter in text:
+  if letter == 'h' or letter == 'H':
+    new_text += 'H"
+  else:
+    new_text += letter 
+print("\nText with every 'h' captialized:\n")
+print(new_text)
+
+print("-------------")
+print("done! :)")
